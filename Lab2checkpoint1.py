@@ -42,7 +42,8 @@ void displayNumber(int num, int pos) {
 void setup() {
     timer = timerBegin(0, 80, true);
     timerAttachInterrupt(timer, &onTimer, true);
-    timerAlarmWrite(timer, 12000, true); //12000us or 12ms
+    timerAlarmWrite(timer, 12000, true); //12000us or 12ms 
+    # เปลี่ยนจาก 12000 ให้ลดลงเพื่อใหไฟ LED สว่าง จนไม่เห็นการกระพริบ
     timerAlarmEnable(timer);
 
     for (int i = 0; i < 2; i++) {
